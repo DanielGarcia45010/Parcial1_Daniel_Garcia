@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 function Home() {
+  const { t } = useTranslation();
+
   const [parts, setParts] = useState([]);
 
   useEffect(() => {
@@ -24,24 +27,24 @@ function Home() {
   if (!parts || parts.length === 0) {
     return (
       <div className="home-container">
-        <h2>Home de la Aplicación</h2>
-        <p>No hay partes disponibles en este momento.</p>
+        <h2>{t('home')}</h2>
+        <p>{t('noPartsAvailable')}</p>
       </div>
     );
   }
 
   return (
     <div className="home-container">
-      <h2>Home de la Aplicación</h2>
+      <h2>{t('home')}</h2>
       <div className="parts-list">
-        {parts.map((part, index) => (
-          <Link key={index} to={`/detailPart/${index}`} className="part-link">
+        {parts.map((part) => (
+          <Link key={part.partName} to={`/detailPart/${encodeURIComponent(part.partName)}`} className="part-link"> 
             <div className="part-card">
               <img src={part.image} alt={part.partName} />
               <h3>{part.partName}</h3>
-              <p>Marca: {part.carMaker}</p>
-              <p>Precio: {part.price}</p>
-              <p>Año del Auto: {part.carYear}</p>
+              <p>{t('carMaker')}: {part.carMaker}</p>
+              <p>{t('price')}: {part.price}</p>
+              <p>{t('carYear')}: {part.carYear}</p>
             </div>
           </Link>
         ))}

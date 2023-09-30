@@ -1,0 +1,18 @@
+{
+    "welcome": "Welcome",
+    "login": "Log In",
+    "home": "Home",
+    "partDetail": "Part Detail",
+    "email": "Email",
+    "password": "Password",
+    "invalidEmail": "Invalid email address.",
+    "shortPassword": "Password should have at least 6 characters.",
+    "noPartsAvailable": "No parts available at the moment.",
+    "partName": "Part Name",
+    "carMaker": "Car Maker",
+    "carModel": "Car Model",
+    "carYear": "Car Year",
+    "description": "Description",
+    "price": "Price"
+  }
+  

@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 
 function DetailPart() {
-  const { partName } = useParams();
+  const { t } = useTranslation();
+  const { partName } = useParams(); 
+
   const [part, setPart] = useState(null);
 
   useEffect(() => {
@@ -28,22 +31,22 @@ function DetailPart() {
   if (!part) {
     return (
       <div className="partDetail">
-        <h2>Detalle de la Parte</h2>
-        <p>Cargando...</p>
+        <h2>{t('partDetail')}</h2>
+        <p>{t('loading')}</p>
       </div>
     );
   }
 
   return (
     <div className="partDetail">
-      <h2>Detalle de la Parte</h2>
+      <h2>{t('partDetail')}</h2>
       <img src={part.image} alt={part.partName} />
-      <p>Part Name: {part.partName}</p>
-      <p>Car Maker: {part.carMaker}</p>
-      <p>Car Model: {part.carModel}</p>
-      <p>Car Year: {part.carYear}</p>
-      <p>Description: {part.description}</p>
-      <p>Price: {part.price}</p>
+      <p>{t('partName')}: {part.partName}</p>
+      <p>{t('carMaker')}: {part.carMaker}</p>
+      <p>{t('carModel')}: {part.carModel}</p>
+      <p>{t('carYear')}: {part.carYear}</p>
+      <p>{t('description')}: {part.description}</p>
+      <p>{t('price')}: {part.price}</p>
     </div>
   );
 }

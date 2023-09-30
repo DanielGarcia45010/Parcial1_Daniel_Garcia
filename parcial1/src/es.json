@@ -1,0 +1,18 @@
+{
+    "welcome": "Bienvenido",
+    "login": "Iniciar sesión",
+    "home": "Inicio",
+    "partDetail": "Detalle de la Parte",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "invalidEmail": "Correo electrónico no válido.",
+    "shortPassword": "La contraseña debe tener al menos 6 caracteres.",
+    "noPartsAvailable": "No hay partes disponibles en este momento.",
+    "partName": "Nombre de la Parte",
+    "carMaker": "Marca del Automóvil",
+    "carModel": "Modelo del Automóvil",
+    "carYear": "Año del Automóvil",
+    "description": "Descripción",
+    "price": "Precio"
+  }
+  
